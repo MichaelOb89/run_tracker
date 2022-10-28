@@ -1,4 +1,6 @@
 const Activity = require('../models/activity')
+const Event = require('../models/event')
+
 
 const dataController = {
     index(req, res, next) {
