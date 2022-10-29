@@ -7,9 +7,11 @@ class New extends React.Component{
                 <h1>Create new Activity</h1>
                 <form method='POST' action='/runs'>
                     Title: <input type="text" name='title'/><br />
-                    Distance: <input type="number" name='distance'/><br />
-                    Pace (minutes:seconds): <input type="number" name='minutesPace'/>: <input type="number" name='secondsPace'/><br />
-                    <input type="Submit" value='Submit Activity'/>
+                    Date: <input type="date" name='date'/><br />
+                    Distance(Miles): <input type="number" name='distance'/><br />
+                    Pace {`(minutes:seconds)`}: <input type="number" name='minutesPace'/>: <input type="number" name='secondsPace'/><br />
+                    Link to Map: <input type="text" name='mapLink' /><br />
+                    <input type="submit" value='Submit Activity'/>
                 </form>
             </>
         )
