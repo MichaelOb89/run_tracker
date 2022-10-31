@@ -1,6 +1,6 @@
 const Activity = require('../models/activity')
 
-const dataController = {
+const activityController = {
     index(req, res, next) {
         Activity.find({}, (err, foundActivities) => {
             if(err) {
@@ -62,4 +62,4 @@ const dataController = {
     }
 }
 
-module.exports = dataController
+module.exports = activityController

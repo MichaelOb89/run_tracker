@@ -1,29 +1,55 @@
 const express = require('express')
 const router = express.Router()
-const dataController = require('./dataController')
+const activityController = require('./activityController')
+const eventController = require('./eventController')
 const viewController = require('./viewController')
 
-//============Routes===========
+//============Event Routes===========
+
 //Index
 
-router.get('/', dataController.index, viewController.index)
+router.get('/events', eventController.index, viewController.index)
 
 // New
-router.get('/new', viewController.newView)
+router.get('/events/new', viewController.newView)
 
 // Delete
-router.delete('/:id', dataController.delete, viewController.redirectHome)
+router.delete('/events/:id', eventController.delete, viewController.redirectHome)
 
 // Update
-router.put('/:id', dataController.update, viewController.redirectHome)
+router.put('/events/:id', eventController.update, viewController.redirectHome)
 
 // Create
-router.post('/', dataController.create, viewController.redirectShow)
+router.post('/events', eventController.create, viewController.redirectShow)
 
 // Edit
-router.get('/:id/edit', dataController.show, viewController.edit)
+router.get('/events/:id/edit', eventController.show, viewController.edit)
 
 // Show
-router.get('/:id', dataController.show, viewController.show)
+router.get('/events/:id', eventController.show, viewController.show)
+
+//============Activity Routes===========
+
+//Index
+
+router.get('/runs', activityController.index, viewController.index)
+
+// New
+router.get('/runs/new', viewController.newView)
+
+// Delete
+router.delete('/runs/:id', activityController.delete, viewController.redirectHome)
+
+// Update
+router.put('/runs/:id', activityController.update, viewController.redirectHome)
+
+// Create
+router.post('/runs', activityController.create, viewController.redirectShow)
+
+// Edit
+router.get('/runs/:id/edit', activityController.show, viewController.edit)
+
+// Show
+router.get('/runs/:id', activityController.show, viewController.show)
 
 module.exports = router
