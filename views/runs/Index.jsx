@@ -16,7 +16,7 @@ class Index extends React.Component{
                         activities.map((activity) => {
                             return(
                                 <li key={activity._id}>
-                                    <a href={`/runs/${activity._id}`}>{activity.title}</a>
+                                    <a href={`/runs/${activity._id}`}>{activity.title} done on {activity.date.toDateString()}</a>
                                 </li>
                             )
                         })

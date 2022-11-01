@@ -1,31 +1,46 @@
 @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap');
 body{
-    background-color: blueviolet;
+    background-color: #162f77;
 }
 
 a{
-    color: whitesmoke;
+    color: #ffDE00;
     margin: 15px;
     font-family: 'Kanit', sans-serif;
+    text-decoration: none;
 }
 h1{
+    color: ghostwhite;
     margin-top: 30px;
     text-align: center;
     font-family: 'Kanit', sans-serif;
 }
 h2{
     font-family: 'Kanit', sans-serif;
+    color: ghostwhite;
 }
 nav {
     position: absolute;
     top: 0;
     right: 0;
     left: 0;
-    background-color: violet;
+    background-color: ghostwhite;
     height: 2em;
     display: flex;
     align-items: center;
 }
 .map{
     text-align: center;
+}
+li{
+    list-style: none;
+}
+nav > a{
+    color: black;
+    background-color: white;
+}
+
+nav > a:hover{
+    color: #ffDE00;
+    background-color: #162f77;
 }
