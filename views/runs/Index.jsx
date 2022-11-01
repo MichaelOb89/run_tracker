@@ -1,11 +1,16 @@
 const React = require('react')
+const Default = require('../layouts/Default')
 
 class Index extends React.Component{
     render(){
-        const { activities } = this.props
+        const { activities, events } = this.props
+        console.log(activities)
+        console.log(events)
         return(
-            <>
-                <h1>Index Page</h1>
+            <Default title='Home'>
+                <h1>Run tracker home page</h1>
+                {events ? <h2>Next event is {events[0].title} on {events[0].date.toDateString()}</h2> : ""}
+                <h2>Your Past activities are:</h2>
                 <ul>
                     {
                         activities.map((activity) => {
@@ -17,7 +22,7 @@ class Index extends React.Component{
                         })
                     }
                 </ul>
-            </>
+            </Default>
         )
     }
 }

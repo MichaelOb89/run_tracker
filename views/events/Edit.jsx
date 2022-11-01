@@ -1,4 +1,5 @@
 const React = require('react')
+const Default = require('../layouts/Default')
 
 class Edit extends React.Component {
     render(){
@@ -10,7 +11,7 @@ class Edit extends React.Component {
             month = event.date.getMonth()
         }}
         return(
-            <>
+            <Default title={`Edit ${event.title}`}>
                 <h1>Edit {event.title}</h1>    
                 <form method='POST' action={`/events/${event._id}?_method=PUT`}>
                     Title: <input type="text" name='title' defaultValue={event.title}/><br />
@@ -18,7 +19,7 @@ class Edit extends React.Component {
                     Distance{`(miles)`}: <input type="number" name='distance' step="0.1" defaultValue={event.distance}/><br />
                     <input type="submit" value='Submit Activity'/>
                 </form>
-            </>
+            </Default>
         )
     }
 }

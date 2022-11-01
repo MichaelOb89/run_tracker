@@ -1,4 +1,5 @@
 const React = require('react')
+const Default = require('../layouts/Default')
 
 class Edit extends React.Component {
     render(){
@@ -10,7 +11,7 @@ class Edit extends React.Component {
             month = activity.date.getMonth()
         }}
         return(
-            <>
+            <Default title={`${activity.title} edit page`}>
                 <h1>Edit {activity.title}</h1>    
                 <form method='POST' action={`/runs/${activity._id}?_method=PUT`}>
                     Title: <input type="text" name='title' defaultValue={activity.title}/><br />
@@ -20,7 +21,7 @@ class Edit extends React.Component {
                     Link to Map: <input type="text" name='mapLink' defaultValue={activity.mapLink}/><br />
                     <input type="submit" value='Submit Activity'/>
                 </form>
-            </>
+            </Default>
         )
     }
 }

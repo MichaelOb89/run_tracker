@@ -1,7 +1,18 @@
 const Activity = require('../models/activity')
+const Event = require('../models/event')
 
 const activityController = {
     index(req, res, next) {
+        Event.find({}, (err, foundEvents)=>{
+            if(err){
+                res.status(400).send({
+                    msg: err.message
+                })
+            } else {
+                foundEvents.sort((a, b) => a.date-b.date)
+                res.locals.data.events = foundEvents
+            }
+        })
         Activity.find({}, (err, foundActivities) => {
             if(err) {
                 res.status(400).send({

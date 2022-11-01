@@ -1,10 +1,11 @@
 const React = require('react')
+const Default = require('../layouts/Default')
 
 class Index extends React.Component{
     render(){
         const { events } = this.props
         return(
-            <>
+            <Default title='Event Home'>
                 <h1>Upcoming Events</h1>
                 <ul>
                     {
@@ -17,7 +18,7 @@ class Index extends React.Component{
                         })
                     }
                 </ul>
-            </>
+            </Default>
         )
     }
 }
