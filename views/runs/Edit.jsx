@@ -15,7 +15,7 @@ class Edit extends React.Component {
                 <form method='POST' action={`/runs/${activity._id}?_method=PUT`}>
                     Title: <input type="text" name='title' defaultValue={activity.title}/><br />
                     Date: <input type="date" name='date' value={`${activity.date.getUTCFullYear()}-${month}-${activity.date.getDate()}`}/><br />
-                    Distance{`(miles)`}: <input type="number" name='distance' defaultValue={activity.distance}/><br />
+                    Distance{`(miles)`}: <input type="number" name='distance' step='0.1' defaultValue={activity.distance}/><br />
                     Pace {`(minutes:seconds)`}: <input type="number" name='minutesPace' defaultValue={activity.minutesPace}/>: <input type="number" name='secondsPace' defaultValue={activity.secondsPace}/><br />
                     Link to Map: <input type="text" name='mapLink' defaultValue={activity.mapLink}/><br />
                     <input type="submit" value='Submit Activity'/>
