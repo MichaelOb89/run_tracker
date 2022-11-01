@@ -5,11 +5,14 @@ class Edit extends React.Component {
     render(){
         const { activity } = this.props
         let month = ""
-        {if(activity.date.getMonth()+1<10){
+        
+        {if(activity.date){
+            if(activity.date.getMonth()+1<10){
             month = `0${activity.date.getMonth()+1}`
         } else {
             month = activity.date.getMonth()
         }}
+        }
         return(
             <Default title={`${activity.title} edit page`}>
                 <h1>Edit {activity.title}</h1>    
