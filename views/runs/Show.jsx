@@ -14,6 +14,9 @@ class Show extends React.Component{
             <Default title={`${activity.title}`} activity={this.props.activity}>
                 <h1>{activity.title} on {activity.date.toDateString()}</h1>
                 <h2>{`This run was done at a pace of ${activity.minutesPace}:${activity.secondsPace} per mile`}</h2>
+                <form method="POST" action={`/runs/${activity._id}?_method=DELETE`}>
+                    <input type="submit" value={`Delete ${activity.title}`}/>
+                </form>
                 <iframe src={`https://www.google.com/maps/d/u/0/embed?${activity.mapLink.substring(start)}`} width="640" height="480"></iframe>
             </Default>
         )
