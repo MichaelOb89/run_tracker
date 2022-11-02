@@ -19,6 +19,10 @@ h2{
     font-family: 'Kanit', sans-serif;
     color: ghostwhite;
 }
+h3{
+    font-family: 'Kanit', sans-serif;
+    color: ghostwhite;
+}
 nav {
     position: absolute;
     top: 0;
@@ -43,4 +47,8 @@ nav > a{
 nav > a:hover{
     color: #ffDE00;
     background-color: #162f77;
+}
+form {
+    color: ghostwhite;
+    font-family: 'Kanit', sans-serif;
 }

@@ -4,9 +4,9 @@ const activityController = require('./activityController')
 const eventController = require('./eventController')
 const viewController = require('./viewController')
 
-//============Event Routes===========
+//= ===========Event Routes===========
 
-//Index
+// Index
 
 router.get('/events', eventController.index, viewController.eventIndex)
 
@@ -30,7 +30,7 @@ router.get('/events/:id', eventController.show, viewController.eventShow)
 
 // //============Activity Routes===========
 
-//Index
+// Index
 
 router.get('/runs', activityController.index, viewController.runIndex)
 
