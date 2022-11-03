@@ -52,3 +52,7 @@ form {
     color: ghostwhite;
     font-family: 'Kanit', sans-serif;
 }
+.index-container{
+    display: flex;
+    justify-content: space-between;
+}
