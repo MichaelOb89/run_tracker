@@ -6,7 +6,8 @@ const activitySchema = new mongoose.Schema({
   distance: { type: Number },
   minutesPace: { type: Number },
   secondsPace: { type: Number },
-  mapLink: { type: String }
+  mapLink: { type: String },
+  username: String
 })
 
 const Activity = mongoose.model('Activity', activitySchema)

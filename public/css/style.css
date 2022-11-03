@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap');
+html{
+    height: 100%;
+}
 body{
     background-color: #162f77;
+    height: 100%;
 }
 
 a{
@@ -39,7 +43,7 @@ nav {
 li{
     list-style: none;
 }
-nav > a{
+nav  a{
     color: black;
     background-color: white;
 }
@@ -65,4 +69,37 @@ ul {
 .index-stats{
     display: flex;
     align-items: center;
+}
+.sign-up{
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    text-align: center;
+    top: 50%;
+    bottom: 50%;
+    padding: 50px;
+}
+.sign-up #create{
+    width: 10em;
+    margin-top: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.sign-up-container{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#login{
+    width: 10em;
+    margin-top: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.nav-auth{
+    right: 15px;
+    position: absolute;
 }

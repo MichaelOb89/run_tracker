@@ -37,6 +37,7 @@ const eventController = {
     })
   },
   create (req, res, next) {
+    req.body.username = req.session.username
     Event.create(req.body, (err, createdEvent) => {
       if (err) {
         res.status(400).send({

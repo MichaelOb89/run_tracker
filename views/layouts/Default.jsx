@@ -17,6 +17,10 @@ class Default extends React.Component {
             <a href='/events/new'>Create a new Event</a>
             {activity ? <a href={`/runs/${activity._id}/edit`}>Edit this Activity</a> : ''}
             {event ? <a href={`/events/${event._id}/edit`}>Edit this Event</a> : ''}
+            <div className='nav-auth'><a href='/user/logout'>Logout</a>
+            <a href='/user/login'>Login</a>
+            <a href="/user/signup">Sign Up</a>
+            </div>
           </nav>
           {this.props.children}
         </body>

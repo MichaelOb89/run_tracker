@@ -48,6 +48,7 @@ const activityController = {
     })
   },
   create (req, res, next) {
+    req.body.username = req.session.username
     Activity.create(req.body, (err, createdActivity) => {
       if (err) {
         res.status(400).send({
