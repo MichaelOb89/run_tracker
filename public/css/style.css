@@ -54,5 +54,15 @@ form {
 }
 .index-container{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
+}
+.event {
+    text-align: center;
+}
+ul {
+    padding: 0;
+}
+.index-stats{
+    display: flex;
+    align-items: center;
 }

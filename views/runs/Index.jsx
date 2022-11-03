@@ -14,7 +14,7 @@ class Index extends React.Component {
     return (
       <Default title='Home'>
         <h1>Run tracker home page</h1>
-        {events ? <h2>Next event is {events[0].title} on {events[0].date.toDateString()}</h2> : ''}
+        {events ? <h2 className='event'>Next event is {events[0].title} on {events[0].date.toDateString()}</h2> : ''}
         <div className='index-container'>
           <div className='index-activitiess'>
             <h2>Here are your past activities:</h2>
