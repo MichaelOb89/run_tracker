@@ -6,6 +6,7 @@ const db = require('./models/db')
 const cors = require('cors')
 const session = require('express-session')
 const MongoStore  =require('connect-mongo')
+const PORT = process.env.PORT || 8000
 
 const app = express()
 
@@ -41,4 +42,4 @@ app.use(
 app.use('/', require('./controllers/routeController'))
 app.use('/user', require('./controllers/authController'))
 
-app.listen(3000)
+app.listen(PORT)
