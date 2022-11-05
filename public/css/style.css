@@ -106,3 +106,27 @@ ul {
 .auth-page{
     display: none;
 }
+#home-page{
+    text-align: center;
+}
+#home-page a {
+    display:inline-block
+}
+
+#home-page a h3:hover{
+    color:#ffDE00;
+}
+
+fieldset {
+    text-align: center;
+}
+#home-page > div > div{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+#home-page > div{
+    height: 80%;
+}

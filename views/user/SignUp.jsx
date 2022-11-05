@@ -11,7 +11,7 @@ class SignUp extends React.Component {
               <div className='sign-up'>
                 <legend>New User</legend>
                 <label> Username: <input type='text' name='username' required /></label>
-                <label>Password: <input type='text' name='password' /></label>
+                <label>Password: <input type='password' name='password' /></label>
                 <input id='create' type='submit' value='Create Account' />
               </div>
               <a href='/user/login'>Click here sign in with an existing user</a>

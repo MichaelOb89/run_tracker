@@ -10,7 +10,7 @@ class Login extends React.Component {
             <fieldset>
               <div className='sign-up'>
                 <label>Username: <input type='text' name='username' required /></label>
-                <label>Password: <input type='text' name='password' required /></label>
+                <label>Password: <input type='password' name='password' required /></label>
                 <input id='login' type='submit' value='Login' />
               </div>
               <a href='/user/signup'>Click here to create a new user</a>
