@@ -103,3 +103,6 @@ ul {
     right: 15px;
     position: absolute;
 }
+.auth-page{
+    display: none;
+}

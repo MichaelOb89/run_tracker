@@ -3,7 +3,7 @@ const Event = require('../models/event')
 
 const activityController = {
   index (req, res, next) {
-    Event.find({}, (err, foundEvents) => {
+    Event.find({ username: req.session.username }, (err, foundEvents) => {
       if (err) {
         res.status(400).send({
           msg: err.message
@@ -13,7 +13,7 @@ const activityController = {
         res.locals.data.events = foundEvents
       }
     })
-    Activity.find({}, (err, foundActivities) => {
+    Activity.find({ username: req.session.username }, (err, foundActivities) => {
       if (err) {
         res.status(400).send({
           msg: err.message

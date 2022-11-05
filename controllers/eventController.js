@@ -2,7 +2,7 @@ const Event = require('../models/event')
 
 const eventController = {
   index (req, res, next) {
-    Event.find({}, (err, foundEvents) => {
+    Event.find({ username: req.session.username }, (err, foundEvents) => {
       if (err) {
         res.status(400).send({
           msg: err.message

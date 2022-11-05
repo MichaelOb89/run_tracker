@@ -11,7 +11,7 @@ class Show extends React.Component {
         start = i + 1
       }
     }
-    if(activity.secondsPace < 10){
+    if (activity.secondsPace < 10) {
       seconds = `0${activity.secondsPace}`
     } else {
       seconds = activity.secondsPace
