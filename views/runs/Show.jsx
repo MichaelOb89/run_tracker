@@ -16,6 +16,7 @@ class Show extends React.Component {
     } else {
       seconds = activity.secondsPace
     }
+    console.log(activity.date)
     return (
       <Default title={`${activity.title}`} activity={this.props.activity}>
         <h1>{activity.title} on {activity.date ? activity.date.toDateString() : ''}</h1>
